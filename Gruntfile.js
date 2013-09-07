@@ -15,7 +15,7 @@ module.exports = function (grunt) {
         },
         watch: {
             css: {
-                files: 'country.css',
+                files: 'country.styl',
                 tasks: 'stylus'
             }
         }
