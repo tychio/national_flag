@@ -6,7 +6,7 @@ module.exports = function (grunt) {
                 options: {
                     linenos: false,
                     compress: true,
-                    banner: '\/* Zhengzheng ZHANG [tychio@yeahmobi.com]\n * 2013.9.6\n *\/'
+                    banner: '\/* Zhengzheng ZHANG [tychio@yeahmobi.com]\n * 2013.9.6\n *\/\n'
                 },
                 files: {
                     'country.css': 'country.styl'
