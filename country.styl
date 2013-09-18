@@ -9,145 +9,25 @@ $margin = 2px
     background-image url($img)
     background-repeat no-repeat
     margin: 0 $margin
-i(id, row, col)
+iconBuild(id, col, row)
     .country-{id}
         background-position (0px - (row * $size)) (0px - (col * $size))
-i(CN, 0, 0)
-i(KG, 0, 1)
-i(LR, 0, 4)
-i(SO, 0, 5)
-i(JM, 0, 6)
-i(MK, 0, 7)
-i(UK, 0, 9)
-i(PY, 0, 11)
-i(AF, 1, 0)
-i(LA, 1, 1)
-i(RO, 1, 3)
-i(ZA, 1, 5)
-i(HU, 1, 8)
-i(CZ, 1, 9)
-i(AU, 1, 11)
-i(LB, 2, 1)
-i(MG, 2, 4)
-i(SD, 2, 5)
-i(IE, 2, 8)
-i(SR, 2, 11)
-i(MY, 3, 1)
-i(TH, 3, 2)
-i(MW, 3, 4)
-i(KN, 3, 6)
-i(IS, 3, 8)
-i(RU, 3, 9)
-i(TJ, 3, 11)
-i(MV, 4, 1)
-i(TM, 4, 2)
-i(CI, 4, 3)
-i(ML, 4, 4)
-i(TZ, 4, 5)
-i(VC, 4, 6)
-i(IT, 4, 8)
-i(SM, 4, 9)
-i(MN, 5, 1)
-i(AE, 5, 2)
-i(MR, 5, 4)
-i(LC, 5, 6)
-i(BG, 5, 7)
-i(LV, 5, 8)
-i(UZ, 6, 2)
-i(MU, 6, 4)
-i(TG, 6, 5)
-i(TT, 6, 6)
-i(SE, 6, 9)
-i(LI, 6, 8)
-i(TL, 7, 0)
-i(NP, 7, 1)
-i(VN, 7, 2)
-i(EG, 7, 3)
-i(MA, 7, 4)
-i(TN, 7, 5)
-i(LT, 7, 8)
-i(CH, 7, 9)
-i(IN, 8, 0)
-i(KP, 8, 1)
-i(YE, 8, 2)
-i(MZ, 8, 4)
-i(UG, 8, 5)
-i(LU, 8, 8)
-i(TR, 8, 9)
-i(ID, 9, 0)
-i(NA, 9, 4)
-i(ZM, 9, 5)
-i(DK, 9, 7)
-i(MT, 9, 8)
-i(UA, 9, 9)
-i(PE, 9, 10)
-i(PK, 10, 1)
-i(NE, 10, 4)
-i(IR, 10, 0)
-i(ZW, 10, 5)
-i(SK, 10, 7)
-i(MD, 10, 8)
-i(IQ, 11, 0)
-i(EH, 11, 1)
-i(NG, 11, 4)
-i(SI, 11, 7)
-i(MC, 11, 8)
-i(UY, 11, 10)
-i(IL, 12, 0)
-i(PH, 12, 1)
-i(RW, 12, 4)
-i(NI, 12, 6)
-i(ES, 12, 7)
-i(ME, 12, 8)
-i(CA, 12, 9)
-i(VE, 12, 10)
-i(JP, 13, 0)
-i(QA, 13, 1)
-i(BF, 13, 2)
-i(ST, 13, 4)
-i(PA, 13, 6)
-i(NO, 13, 8)
-i(HK, 13, 10)
-i(JO, 14, 0)
-i(SA, 14, 1)
-i(GW, 14, 3)
-i(SN, 14, 4)
-i(NL, 14, 8)
-i(MX, 14, 9)
-i(LY, 14, 10)
-i(NZ, 15, 10)
-i(KZ, 15, 0)
-i(SG, 15, 1)
-i(KE, 15, 3)
-i(SC, 15, 4)
-i(DE, 15, 6)
-i(PL, 15, 8)
-i(KW, 16, 0)
-i(KR, 16, 1)
-i(LS, 16, 3)
-i(SL, 16, 4)
-i(PT, 16, 8)
-i(US, 16, 9)
-i(RS, 16, 10)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/*r /c-> 00 01 02 03 04 05 06 07 08 09 10 11 12 13 14 15 16*/
+$row00 = CN AF __ __ __ __ __ TL IN ID IR IQ IL JP JO KZ KW
+$row01 = KG LA LB MY MV MN __ NP KP __ PK EH PH QA SA SG KR
+$row02 = __ __ __ TH TM AE UZ VN YE __ __ __ __ BF __ __ __
+$row03 = __ RO __ __ CI __ __ EG __ __ __ __ __ __ GW KE LS
+$row04 = LR __ MG MW ML MR MU MA MZ NA NE NG RW ST SN SC SL
+$row05 = SO ZA SD __ TZ __ TG TN UG ZM ZW __ __ __ __ __ __
+$row06 = JM __ __ KN VC LC TT __ __ __ __ __ NI PA __ DE __
+$row07 = MK __ __ __ __ BG __ __ __ DK SK SI ES __ __ __ __
+$row08 = __ HU IE IS IT LV LI LT LU MT MD MC ME NO NL PL PT
+$row09 = UK CZ __ RU SM __ SE CH TR UA __ __ CA __ MX __ US
+$row10 = __ __ __ __ __ __ __ __ __ PE __ UY VE HK LY NZ RS
+$row11 = PY AU SR TJ __ __ __ __ __ __ __ __ __ __ __ __ __
+$pos = $row00 $row01 $row02 $row03 $row04 $row05 $row06 $row07 $row08 $row09 $row10 $row11
+for $rowList, $row in $pos
+    for $country, $col in $rowList
+        if $country != __
+            iconBuild($country, $row, $col)
+iconBuild(__, -1, -1)
