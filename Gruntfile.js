@@ -2,7 +2,7 @@ module.exports = function (grunt) {
     'use strict';
     grunt.initConfig({
         stylus: {
-            complie: {
+            compile: {
                 options: {
                     linenos: false,
                     compress: true,
