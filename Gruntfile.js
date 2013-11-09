@@ -1,6 +1,12 @@
 module.exports = function (grunt) {
     'use strict';
     grunt.initConfig({
+        watch: {
+            css: {
+                files: 'country.styl',
+                tasks: 'stylus'
+            }
+        },
         stylus: {
             compile: {
                 options: {
@@ -11,12 +17,6 @@ module.exports = function (grunt) {
                 files: {
                     'country.css': 'country.styl'
                 }
-            }
-        },
-        watch: {
-            css: {
-                files: 'country.styl',
-                tasks: 'stylus'
             }
         }
     });
